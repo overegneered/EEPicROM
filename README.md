@@ -21,5 +21,5 @@ First, you need to actually build it, both hardware and software.
 - EEPicROM is designed to work both with the Pico drawing power from a connected USB cable or +5V from the circuit it is connected to, and can handle the USB being plugged/unplugged when also receiving power from 5V.
 - The on-board LED is switched with the output enable signal to the level shifters - that is, when the LED is illuminated, EEPicROM is enabled, and vice versa.
 
-# EEPicROM in action
+# EEPicROM in action (sorta)
 ![EEPicROM](/assets/EEPicROM_basic_setup.png)

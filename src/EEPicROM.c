@@ -55,13 +55,12 @@ int main() {
       gpio = gpio_get_all();
       address = (gpio & MASK_ADDRESS) >> 8;
 
-      // disable the level shifters if either Output Enable or Chip Enable goes high 
+      // disable the level shifters if either Output Enable or Chip Enable goes high
       if (gpio & MASK_ENABLE_IN) {
          gpio = 0;
       }
       else {
-         data = memory[address];
-         gpio = MASK_ENABLE_OUT | data;
+         gpio = MASK_ENABLE_OUT | memory[address];
       }
 
       gpio_put_masked(MASK_OUTPUTS, gpio);
